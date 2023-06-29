@@ -1,0 +1,580 @@
+/************ General Css ************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  color: #fff !important;
+  font-family: 'Centra', sans-serif !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+@media (min-width:1700px) {
+  main .container {
+    max-width: 100%;
+    padding: 0 150px;
+  }
+}
+
+/************ Navbar Css ************/
+.navbar {
+  width: 100%;
+  height: 100px;
+  padding: 20px 0px;
+  position: fixed;
+  background-color: #c5d5da86;
+  top: 10px;
+  transition: 1s ease-in;
+
+}
+
+.Scrolled {
+  top: 0;
+  padding: 0px;
+  background-color: #aab3b4 !important;
+
+}
+
+.logo-img {
+  width: 120px;
+  height: 120px;
+  animation: move 3s ease-in infinite reverse;
+
+}
+
+@keyframes move {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: rotate(-45deg);
+  }
+
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+
+  75% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+#basic-navbar {
+background-color: #237697 !important;
+}
+
+.navbar-link,
+.brand {
+  margin: 10px;
+  font-size: 20px !important;
+  color: rgb(204, 222, 230) !important;
+  text-shadow:1px 1px 10px rgb(48, 101, 126);
+
+  letter-spacing: 0.8px;
+  padding: 0 15px;
+  opacity: 0.7;
+}
+
+.navbar-link:hover,
+.brand:hover {
+  color: rgb(145, 177, 214) !important;
+   
+  opacity: 1;
+}
+
+.navbar-icons {
+  margin: 5px;
+  height: 80px !important;
+
+}
+
+.navIcon {
+  margin: 15px;
+  font-size: 30px !important;
+  line-height: 30px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #b3edf3;
+  padding: 10px;
+  position: relative;
+}
+
+.navIcon::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  top: 0;
+  left: 0;
+  background-color: #9aa0b9;
+  transform: scale(0, 0);
+  transition: 0.8s ease-in;
+}
+
+.navIcon:hover::before {
+  transform: scale(1, 1);
+  opacity: 0.3;
+}
+
+.navBtn {
+  position: relative;
+  width: 130px;
+  height: 40px;
+  border: 1px solid #386475;
+  border-radius: 10px;
+  color: #237697;
+  font: bold 18px sans-serif;
+}
+
+.navBtn::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  background-color: #9aa0b9;
+  transition: 0.8s ease-in;
+}
+
+.navBtn:hover::before {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+/************ Banner Css ************/
+.banner {
+  margin-top: 0;
+  padding: 150px 0 150px 0;
+  background-image: url('./assets/img/banner2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  line-height: 50px !important;
+}
+
+.banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1.3;
+  margin: 20px 0;
+  display: block;
+}
+
+.banner p {
+  color: #7e97a0;
+
+  font-size: 22px;
+  letter-spacing: 1.2px;
+  line-height: 1.3;
+
+}
+
+.banner button {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+
+.banner button .shape {
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.5s ease-in-out;
+  line-height: 1;
+}
+
+.banner button:hover .shape {
+  margin-left: 25px;
+}
+
+.banner img {
+  animation: updown 5s linear infinite;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-30px);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+/************ Skills Css ************/
+.skill {
+  padding: 15px 0 50px 0;
+  position: relative;
+  background-image: -webkit-linear-gradient(40%rgb(2, 34, 49), rgb(49, 113, 121)) !important;
+}
+
+.skillbox {
+  background-image: conic-gradient(rgb(85, 5, 81), rgb(221, 238, 241), rgb(131, 155, 161), rgb(15, 66, 82), rgb(1, 20, 27));
+  box-shadow: 5px 5px 20px 10px #97afb8;
+  border-radius: 80px;
+  text-align: center;
+  padding: 50px 50px;
+  margin-top: -50px;
+}
+
+.skill h2 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.skill p {
+  color: #B8B8B8;
+  font-size: 20px;
+  letter-spacing: 1.2px;
+  line-height: 1.2;
+  margin: 15px 0 75px 0;
+}
+
+.skills-slider {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.skills-slider .skill-item {
+  width: 50%;
+  margin: 10px auto;
+}
+
+
+/************ Projects Css ************/
+.project {
+  padding: 50px 10px 0px 10px;
+  margin-bottom: -50px ;
+  position: relative;
+  background-color: rgba(142, 196, 196, 0.884);
+}
+
+.project .proj-title {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.project .proj-txt {
+  color: #055366;
+  font-size: 20px;
+  margin: 20px auto;
+  text-align: center;
+  width: 50%;
+
+}
+
+.project .nav-pills {
+  max-width: 900px;
+  margin: auto;
+  border-radius: 45px;
+  background-color: rgba(152, 201, 198, 0.4);
+  overflow: hidden;
+}
+
+.project .nav-pills .nav-item {
+  max-width: 300px;
+}
+
+.project .nav-pills .nav-link {
+  position: relative;
+  padding: 15px 5px;
+  color: #f1f6f7;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.5s ease-in-out;
+  text-align: center;
+  z-index: 0;
+}
+
+.project .nav-pills .nav-link.active {
+  border: 1px solid rgb(204, 236, 229)
+}
+
+.project .nav-pills .nav-link::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: conic-gradient(rgb(85, 5, 81), rgb(125, 160, 167), rgb(131, 155, 161), rgb(15, 66, 82), rgb(1, 20, 27));
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+
+}
+
+.nav-pills .firstTab {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50px 0px 0px 50px;
+}
+
+.nav-pills .secondTab {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-pills .thirdTab {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 50px 50px 0;
+}
+.project .nav-pills .nav-link.active::before {
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0.8;
+}
+.project .nav-pills .firstTab.active::before {
+  border-radius: 50px 0px 0px 50px;
+}
+.project .nav-pills .thirdTab.active::before {
+  border-radius: 0 50px 50px 0;}
+  
+#projects-tabs-tabpane-third .txt {
+  font-size: 25px !important;
+  font-weight: bold;
+}
+
+/************ ProjectCard Css ************/
+.proj-image {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.proj-image img {
+
+  height: 250px;
+
+}
+
+.proj-image::before {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  content: "";
+  background-image: -webkit-radial-gradient(purple, rgb(50, 119, 139));
+  opacity: 0.7;
+  transition: 1s ease-in-out;
+}
+
+.proj-image:hover::before {
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: 1s ease-in-out;
+  opacity: 0;
+
+}
+
+.proj-image:hover .overlay {
+  top: 50%;
+  opacity: 1;
+}
+
+.overlay h4 {
+  font: 35px bold franklin;
+}
+
+.overlay span {
+  font: italic 18px;
+}
+
+/************ Contact Css ************/
+.contact {
+  margin-top: 0;
+  background: linear-gradient(90deg,  #669ab1 20% ,#b999ad 80%);
+  padding: 50px 0 200px 0;
+}
+
+.contact img {
+  width: 80%;
+  margin-top: -30%;
+}
+
+.contact h2 {
+  font: 50px bold 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+}
+
+.contact form .form-control {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  color: #5e0652 !important;
+  font: 22px bold 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  ;
+  padding: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  background: rgba(255, 255, 255, 1);
+  color: #104b63;
+}
+
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+  font: 16px normal 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #053b53;
+}
+
+.contact form Button {
+  position: relative;
+  color: #741967;
+  background-image: conic-gradient(rgb(85, 5, 81), rgb(125, 160, 167), rgb(131, 155, 161), rgb(15, 66, 82), rgb(1, 20, 27));
+  box-shadow: -5px -5px 30px 10px rgba(51, 138, 172, 0.5);
+  padding: 20px 40px;
+  font: bold 25px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+  margin-top: 30px;
+  transition: 0.5s ease-in-out;
+}
+
+.contact form Button::before {
+  content: "";
+  background: rgba(112, 120, 121, 0.308);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  z-index: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.contact form Button:hover::before {
+  width: 100%;
+}
+
+
+/************ Footer Css ************/
+.footer {
+  position: relative;
+  padding: 0 0 50px 0;
+  background-image: url('./assets/img/banner-bg.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mail-box {
+  background: #edfaf9;
+  border-radius: 60px;
+  box-shadow:-5px 5px 20px 10px #8e5b9b;
+  color: #175066;
+  padding: 85px 80px;
+  margin-bottom: 80px;
+  margin-top: -150px;
+}
+
+.mail-box h3 {
+  font: bold 25px "Helvetica Neue", Helvetica, Arial;
+
+}
+
+.new-mail-box {
+  height: 100px;
+  background: #dbaae7;
+  padding: 5px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 0;
+
+}
+
+.new-mail-box input {
+  position: absolute;
+  width: 80%;
+  top: 20% !important;
+  left: 0%;
+  height: inherit;
+  color: #620d77;
+  font: 500 18px "Helvetica Neue", Helvetica, Arial;
+  background: transparent;
+  border: 0;
+  padding: 15px;
+}
+
+.new-mail-box button {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  background: linear-gradient(#AA367C 10%, #2fa1bd 90%);
+  padding: 15px;
+  color: #fff;
+  font: bold 25px "Helvetica Neue", Helvetica, Arial;
+
+  border-radius: 18px;
+}
+
+.footer img {
+  width: 30%;
+
+}
+
+.footer p {
+  font: normal 18px arial;
+
+  color: #B8B8B8;
+  letter-spacing: 0.8px;
+  margin-top: 20px;
+}
